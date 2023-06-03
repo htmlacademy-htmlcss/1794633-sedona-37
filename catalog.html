@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Гостиницы Седоны</title>
+</head>
+<body>
+  <header class="page-header">
+    <a class="logo-link" href="">
+      <img class="logo-image" src="img/logo.svg" width="140" height="70" alt="Логотип сайта города Седона">
+    </a>
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-item-link" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-item-link" href="#">О Cедоне</a>
+        </li>
+        <li class="navigation-item navigation-item-current">
+          <a class="navigation-item-link" href="">Гостиницы</a>
+        </li>
+      </ul>
+      <ul class="choose-places-list">
+        <li class="choose-places-item">
+          <button class="search-places-button" type="button">
+                <span class="visually-hidden">
+                  Поиск отеля
+                </span>
+          </button>
+        </li>
+        <li class="choose-places-item">
+          <button class="favorites-places-button" type="button">
+                <span class="visually-hidden">
+                  Открыть Избранное
+                </span>
+          </button>
+        </li>
+        <li class="choose-places-item">
+          <button class="search-places-button" type="button">
+            Хочу сюда!
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hotel-catalog-page">
+    <h1 class="hotel-catalog-title">
+      Гостиницы Седоны
+    </h1>
+    <ul class="breadcrumbs-list" aria-label="Хлебные крошки">
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-item-link" href="index.html">
+          Главная
+        </a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-item-link" href="" aria-current="page">
+          Гостиницы
+        </a>
+      </li>
+    </ul>
+    <form class="filter-settings" action="https://echo.htmlacademy.ru/" method="post">
+      <h2 class="filter-settings-title visually-hidden">
+        Настройки фильтрации
+      </h2>
+      <fieldset class="infrastructure-filter">
+        <legend class="infrastructure-filter-title">
+          Инфраструктура:
+        </legend>
+        <label class="infrastructure-filter-label">
+          <input class="infrastructure-filter-input" type="checkbox" name="swim-pool" checked>
+          Бассейн
+        </label>
+        <label class="infrastructure-filter-label">
+          <input class="infrastructure-filter-input" type="checkbox" name="car-parking" checked>
+          Парковка
+        </label>
+        <label class="infrastructure-filter-label" lang="en">
+          <input class="infrastructure-filter-input" type="checkbox" name="wi-fi">
+          Wi-Fi
+        </label>
+      </fieldset>
+
+      <fieldset class="hotel-type-filter">
+        <legend class="hotel-type-filter-title">
+          Тип жилья:
+        </legend>
+        <label class="hotel-type-label">
+          <input class="hotel-type-input" type="radio" name="hotel-type" checked>
+          Гостиница
+        </label>
+        <label class="hotel-type-label">
+          <input class="hotel-type-input" type="radio" name="hotel-type">
+          Мотель
+        </label>
+        <label class="hotel-type-label">
+          <input class="hotel-type-input" type="radio" name="hotel-type">
+          Апартаменты
+        </label>
+      </fieldset>
+
+      <fieldset class="price-filter">
+        <legend class="price-filter-title">
+          Стоимость, ₽:
+        </legend>
+        <label class="price-label">
+          <input class="price-input" type="number" name="min-price-value" min="0" value="0">
+          от
+        </label>
+        <label class="price-label">
+          <input class="price-input" type="number" name="max-price-value" max="9000" value="9000">
+          до
+        </label>
+        <label class="price-range-label">
+          <input class="price-range-slider" type="range">
+        </label>
+      </fieldset>
+
+      <button class="apply-filter-button" type="submit">
+        Применить
+      </button>
+      <button class="reset-filter-button" type="reset">
+        Сбросить
+      </button>
+    </form>
+
+    <section class="found-hotels">
+      <h2 class="found-hotels-title">
+        Найдено гостиниц:
+      </h2>
+      <p class="found-hotels-quantity">
+        38
+      </p>
+
+      <select class="found-hotels-sort-control" aria-label="Сортировка">
+        <option value="cheap">Сначала дешевые</option>
+        <option value="expensive">Сначала дорогие</option>
+        <option value="popular">Сначала популярные</option>
+      </select>
+
+      <ul class="found-hotels-output-type-list">
+        <li class="found-hotels-output-type-item current">
+          <button class="found-hotels-output-type-button" type="button">
+            <span class="visually-hidden">
+              В виде маленьких карточек
+            </span>
+          </button>
+        </li>
+        <li class="found-hotels-output-type-item">
+          <button class="found-hotels-output-type-button" type="button">
+            <span class="visually-hidden">
+              В виде карточек с подробным описанием
+            </span>
+          </button>
+        </li>
+        <li class="found-hotels-output-type-item">
+          <button class="found-hotels-output-type-button" type="button">
+            <span class="visually-hidden">
+              В виде списка
+            </span>
+          </button>
+        </li>
+      </ul>
+
+      <ul class="found-hotels-list">
+
+        <li class="found-hotels-item">
+          <img class="found-hotels-item-image" src="img/amara-resort-spa.jpg" width="300" height="212"
+               alt="Вид на звездное ночное небо в ущелье между скал">
+          <h3 class="found-hotels-item-name">
+            Amara Resort & Spa
+          </h3>
+          <p class="found-hotels-item-properties">
+            <span class="found-hotels-item-type">
+              Гостиница
+            </span>
+            <b class="found-hotels-item-price">
+              От 4000 ₽
+            </b>
+          </p>
+          <a class="found-hotels-item-detailed" href="#">
+            Подробнее
+          </a>
+          <button class="found-hotels-item-add-to-favorites-button" type="button">
+            В избранное
+          </button>
+          <p class="found-hotels-item-rating-stars">
+            <span class="visually-hidden">
+              Четыре звезды
+            </span>
+          </p>
+          <p class="found-hotels-item-rating-with-points">
+            Рейтинг:
+            <b class="found-hotels-item-rating-points">
+              8,5
+            </b>
+          </p>
+        </li>
+
+        <li class="found-hotels-item">
+          <img class="found-hotels-item-image" src="img/villas-at-poco-diablo.jpg" width="300" height="212"
+            alt="Вид на горы и радуга">
+          <h3 class="found-hotels-item-name">
+            Villas at Poco Diablo
+          </h3>
+          <p class="found-hotels-item-properties">
+            <span class="found-hotels-item-type">
+              Гостиница
+            </span>
+            <b class="found-hotels-item-price">
+              От 5000 ₽
+            </b>
+          </p>
+          <a class="found-hotels-item-detailed" href="#">
+            Подробнее
+          </a>
+          <button class="found-hotels-item-add-to-favorites-button" type="button">
+            В избранное
+          </button>
+          <p class="found-hotels-item-rating-stars">
+            <span class="visually-hidden">
+              Четыре звезды
+            </span>
+          </p>
+          <p class="found-hotels-item-rating-with-points">
+            Рейтинг:
+            <b class="found-hotels-item-rating-points">
+              9,2
+            </b>
+          </p>
+        </li>
+
+        <li class="found-hotels-item">
+          <img class="found-hotels-item-image" src="img/desert-quail-inn.jpg" width="300" height="212"
+            alt="Живописные горы на фоне ясного неба">
+          <h3 class="found-hotels-item-name">
+            Desert Quail Inn
+          </h3>
+          <p class="found-hotels-item-properties">
+            <span class="found-hotels-item-type">
+              Гостиница
+            </span>
+            <b class="found-hotels-item-price">
+              От 2500 ₽
+            </b>
+          </p>
+          <a class="found-hotels-item-detailed" href="#">
+            Подробнее
+          </a>
+          <button class="found-hotels-item-add-to-favorites-button" type="button">
+            В избранное
+          </button>
+          <p class="found-hotels-item-rating-stars">
+            <span class="visually-hidden">
+              Три звезды
+            </span>
+          </p>
+          <p class="found-hotels-item-rating-with-points">
+            Рейтинг:
+            <b class="found-hotels-item-rating-points">
+              6,9
+            </b>
+          </p>
+        </li>
+
+        <li class="found-hotels-item">
+          <img class="found-hotels-item-image" src="img/green-tree-inn.jpg" width="300" height="212"
+            alt="Горы в сиянии звездного неба">
+          <h3 class="found-hotels-item-name">
+            GreenTree Inn
+          </h3>
+          <p class="found-hotels-item-properties">
+            <span class="found-hotels-item-type">
+              Гостиница
+            </span>
+            <b class="found-hotels-item-price">
+              От 1500 ₽
+            </b>
+          </p>
+          <a class="found-hotels-item-detailed" href="#">
+            Подробнее
+          </a>
+          <button class="found-hotels-item-add-to-favorites-button" type="button">
+            В избранное
+          </button>
+          <p class="found-hotels-item-rating-stars">
+            <span class="visually-hidden">
+              Две звезды
+            </span>
+          </p>
+          <p class="found-hotels-item-rating-with-points">
+            Рейтинг:
+            <b class="found-hotels-item-rating-points">
+              5,0
+            </b>
+          </p>
+        </li>
+
+      </ul>
+
+      <ul class="found-hotels-pagination">
+        <li class="found-hotels-pagination-item">
+          <a class="found-hotels-pagination-link found-hotels-pagination-current">1</a>
+        </li>
+        <li class="found-hotels-pagination-item">
+          <a class="found-hotels-pagination-link" href="#">2</a>
+        </li>
+        <li class="found-hotels-pagination-item">
+          <a class="found-hotels-pagination-link" href="#">3</a>
+        </li>
+        <li class="found-hotels-pagination-item">
+          <a class="found-hotels-pagination-link" href="#">4</a>
+        </li>
+        <li class="found-hotels-pagination-item">
+          ...
+        </li>
+        <li class="found-hotels-pagination-item">
+          <a class="found-hotels-pagination-link" href="#">10</a>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <section class="email-subscribe">
+      <h2 class="email-subscribe-title">
+        Подпишитесь на рассылку
+      </h2>
+      <p class="email-subscribe-teaser">
+        Только полезная информация и никакого спама, честное бойскаутское!
+      </p>
+      <form class="email-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <input class="email-input" type="email" name="email" placeholder="Ваш e-mail">
+        <button class="email-subscribe-button" type="submit">
+          Подписаться
+        </button>
+      </form>
+    </section>
+
+    <section class="contacts">
+      <h2 class="visually-hidden">
+        Контактная информация
+      </h2>
+      <ul class="social-list">
+        <li class="social-item vkontakte">
+          <a class="social-item-link" href="https://vk.com/htmlacademy">
+            <img class="social-item-icon" src="img/vk-icon.svg" alt="Вконтакте">
+          </a>
+        </li>
+        <li class="social-item telegram">
+          <a class="social-item-link" href="https://t.me/htmlacademy">
+            <img class="social-item-icon" src="img/telegram-icon.svg" alt="Телеграм">
+          </a>
+        </li>
+        <li class="social-item youtube">
+          <a class="social-item-link" href="https://www.youtube.com/user/htmlacademyru">
+            <img class="social-item-icon" src="img/youtube-icon.svg" alt="Youtube" lang="en">
+          </a>
+        </li>
+      </ul>
+      <a class="phone-link" href="tel:+78128121212">
+        +7 (812) 812-12-12
+      </a>
+      <a class="html-academy-link" href="https://htmlacademy.ru/">
+        <img class="html-academy-logo" src="img/html-academy-logo.svg" alt="html academy" lang="en">
+      </a>
+    </section>
+  </footer>
+</body>
+</html>
