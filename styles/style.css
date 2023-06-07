@@ -134,6 +134,8 @@ body {
 .welcome-image-container {
   background-image: url("../images/welcome-mountains.jpg");
   background-repeat: no-repeat;
+  height: 485px;
+  padding-top: 51px;
 }
 
 .welcome-image {
