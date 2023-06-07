@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Гостиницы Седоны</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="page-header">
@@ -12,10 +13,10 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-item-link" href="index.html">Главная</a>
+          <a class="navigation-item-link navigation-item-link-to-main-page" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-item-link" href="#">О Cедоне</a>
+          <a class="navigation-item-link navigation-item-link-to-about-sedona" href="#">О Cедоне</a>
         </li>
         <li class="navigation-item navigation-item-current">
           <span>Гостиницы</span>
@@ -23,21 +24,21 @@
       </ul>
       <ul class="choose-places-list">
         <li class="choose-places-item">
-          <button class="search-places-button" type="button">
-                <span class="visually-hidden">
-                  Поиск отеля
-                </span>
+          <button class="search-places-magnify-glass-button" type="button">
+            <span class="magnify-glass-icon visually-hidden">
+              Поиск отеля
+            </span>
           </button>
         </li>
         <li class="choose-places-item">
           <button class="favorites-places-button" type="button">
-                <span class="visually-hidden">
-                  Открыть Избранное
-                </span>
+            <span class="visually-hidden">
+              Открыть Избранное
+            </span>
           </button>
         </li>
         <li class="choose-places-item">
-          <button class="search-places-button" type="button">
+          <button class="search-places-i-want-here-button common-button" type="button">
             Хочу сюда!
           </button>
         </li>
@@ -46,129 +47,140 @@
   </header>
 
   <main class="hotel-catalog-page">
-    <h1 class="hotel-catalog-title">
-      Гостиницы Седоны
-    </h1>
-    <ul class="breadcrumbs-list" aria-label="Хлебные крошки">
-      <li class="breadcrumbs-item">
-        <a class="breadcrumbs-item-link" href="index.html">
-          Главная
-        </a>
-      </li>
-      <li class="breadcrumbs-item">
-        <span>
-          Гостиницы
-        </span>
-      </li>
-    </ul>
-    <form class="filter-settings" action="https://echo.htmlacademy.ru/" method="post">
-      <h2 class="filter-settings-title visually-hidden">
-        Настройки фильтрации
-      </h2>
-      <fieldset class="infrastructure-filter">
-        <legend class="infrastructure-filter-title">
-          Инфраструктура:
-        </legend>
-        <label class="infrastructure-filter-label">
-          <input class="infrastructure-filter-input" type="checkbox" name="swim-pool" checked>
-          Бассейн
-        </label>
-        <label class="infrastructure-filter-label">
-          <input class="infrastructure-filter-input" type="checkbox" name="car-parking" checked>
-          Парковка
-        </label>
-        <label class="infrastructure-filter-label" lang="en">
-          <input class="infrastructure-filter-input" type="checkbox" name="wi-fi">
-          Wi-Fi
-        </label>
-      </fieldset>
-
-      <fieldset class="hotel-type-filter">
-        <legend class="hotel-type-filter-title">
-          Тип жилья:
-        </legend>
-        <label class="hotel-type-label">
-          <input class="hotel-type-input" type="radio" name="hotel-type" checked>
-          Гостиница
-        </label>
-        <label class="hotel-type-label">
-          <input class="hotel-type-input" type="radio" name="hotel-type">
-          Мотель
-        </label>
-        <label class="hotel-type-label">
-          <input class="hotel-type-input" type="radio" name="hotel-type">
-          Апартаменты
-        </label>
-      </fieldset>
-
-      <fieldset class="price-filter">
-        <legend class="price-filter-title">
-          Стоимость, ₽:
-        </legend>
-        <label class="price-label">
-          <input class="price-input" type="number" name="min-price-value" min="0" value="0">
-          от
-        </label>
-        <label class="price-label">
-          <input class="price-input" type="number" name="max-price-value" max="9000" value="9000">
-          до
-        </label>
-        <label class="price-range-label">
-          <input class="price-range-slider" type="range">
-        </label>
-      </fieldset>
-
-      <button class="apply-filter-button" type="submit">
-        Применить
-      </button>
-      <button class="reset-filter-button" type="reset">
-        Сбросить
-      </button>
-    </form>
-
-    <section class="found-hotels">
-      <h2 class="found-hotels-title">
-        Найдено гостиниц:
-        <span class="found-hotels-quantity">
-          38
-        </span>
-      </h2>
-
-      <select class="found-hotels-sort-control" aria-label="Сортировка">
-        <option value="cheap">Сначала дешевые</option>
-        <option value="expensive">Сначала дорогие</option>
-        <option value="popular">Сначала популярные</option>
-      </select>
-
-      <ul class="found-hotels-output-type-list">
-        <li class="found-hotels-output-type-item current">
-          <button class="found-hotels-output-type-button" type="button">
-            <span class="visually-hidden">
-              В виде маленьких карточек
-            </span>
-          </button>
+    <div class="hotel-catalog-top-container">
+      <h1 class="hotel-catalog-title">
+        Гостиницы Седоны
+      </h1>
+      <ul class="breadcrumbs-list" aria-label="Хлебные крошки">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-item-link breadcrumbs-item-to-main-page" href="index.html">
+            Главная
+          </a>
         </li>
-        <li class="found-hotels-output-type-item">
-          <button class="found-hotels-output-type-button" type="button">
-            <span class="visually-hidden">
-              В виде карточек с подробным описанием
-            </span>
-          </button>
-        </li>
-        <li class="found-hotels-output-type-item">
-          <button class="found-hotels-output-type-button" type="button">
-            <span class="visually-hidden">
-              В виде списка
-            </span>
-          </button>
+        <li class="breadcrumbs-item-current">
+          <span class="breadcrumbs-item-link-current">
+            Гостиницы
+          </span>
         </li>
       </ul>
+      <form class="filter-settings" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="filter-settings-title visually-hidden">
+          Настройки фильтрации
+        </h2>
+        <fieldset class="infrastructure-filter">
+          <legend class="infrastructure-filter-title filter-legend-title">
+            Инфраструктура:
+          </legend>
+          <label class="infrastructure-filter-label">
+            <input class="infrastructure-filter-input" type="checkbox" name="swim-pool" checked>
+            Бассейн
+          </label>
+          <label class="infrastructure-filter-label">
+            <input class="infrastructure-filter-input" type="checkbox" name="car-parking" checked>
+            Парковка
+          </label>
+          <label class="infrastructure-filter-label" lang="en">
+            <input class="infrastructure-filter-input" type="checkbox" name="wi-fi">
+            Wi-Fi
+          </label>
+        </fieldset>
+
+        <fieldset class="hotel-type-filter">
+          <legend class="hotel-type-filter-title filter-legend-title">
+            Тип жилья:
+          </legend>
+          <label class="hotel-type-label">
+            <input class="hotel-type-input" type="radio" name="hotel-type" checked>
+            Гостиница
+          </label>
+          <label class="hotel-type-label">
+            <input class="hotel-type-input" type="radio" name="hotel-type">
+            Мотель
+          </label>
+          <label class="hotel-type-label">
+            <input class="hotel-type-input" type="radio" name="hotel-type">
+            Апартаменты
+          </label>
+        </fieldset>
+
+        <fieldset class="price-filter">
+          <legend class="price-filter-title filter-legend-title">
+            Стоимость, ₽:
+          </legend>
+
+          <div class="min-to-max-input-container">
+            <label class="price-label visually-hidden" for="min-price-value">
+              от
+            </label>
+            <input class="price-input" type="number" id="min-price-value" name="min-price-value" min="0" value="0">
+
+            <label class="price-label visually-hidden" for="max-price-value">
+              до
+            </label>
+            <input class="price-input" type="number" id="max-price-value" name="max-price-value" max="9000" value="9000">
+          </div>
+
+          <label class="price-range-label">
+            <input class="price-range-slider" type="range">
+          </label>
+        </fieldset>
+
+        <div class="filter-form-button-container">
+          <button class="apply-filter-button filter-form-button" type="submit">
+            Применить
+          </button>
+          <button class="reset-filter-button filter-form-button" type="reset">
+            Сбросить
+          </button>
+        </div>
+      </form>
+    </div>
+    <section class="found-hotels">
+
+      <div class="found-hotels-control-container">
+        <h2 class="found-hotels-title">
+          Найдено гостиниц:
+          <span class="found-hotels-quantity">
+            38
+          </span>
+        </h2>
+
+        <select class="found-hotels-sort-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешевые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
+        </select>
+
+        <ul class="found-hotels-output-type-list">
+          <li class="found-hotels-output-type-item current">
+            <button class="found-hotels-output-type-button view-as-small-cards-button found-hotels-output-type-button-active" type="button">
+              <span class="visually-hidden">
+                В виде маленьких карточек
+              </span>
+            </button>
+          </li>
+          <li class="found-hotels-output-type-item">
+            <button class="found-hotels-output-type-button view-as-card-with-description-button" type="button">
+              <span class="visually-hidden">
+                В виде карточек с подробным описанием
+              </span>
+            </button>
+          </li>
+          <li class="found-hotels-output-type-item">
+            <button class="found-hotels-output-type-button view-as-list-button" type="button">
+              <span class="visually-hidden">
+                В виде списка
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
 
       <ul class="found-hotels-list">
 
         <li class="found-hotels-item">
           <a class="found-hotels-item-image-link" href="#">
-            <img class="found-hotels-item-image" src="images/amara-resort-spa.jpg" width="300" height="212"
+            <img class="found-hotels-item-image" src="images/catalog/amara-resort-spa.jpg" width="300" height="212"
                  alt="Вид на звездное ночное небо в ущелье между скал">
           </a>
           <a class="found-hotels-item-name-link" href="#">
@@ -184,28 +196,28 @@
               От 4000 ₽
             </span>
           </p>
-          <a class="found-hotels-item-detailed" href="#">
-            Подробнее
-          </a>
-          <button class="found-hotels-item-add-to-favorites-button" type="button">
-            В избранное
-          </button>
-          <p class="found-hotels-item-rating-stars">
-            <span class="visually-hidden">
-              Четыре звезды
-            </span>
-          </p>
-          <p class="found-hotels-item-rating-with-points">
-            Рейтинг:
-            <span class="found-hotels-item-rating-points">
-              8,5
-            </span>
-          </p>
+          <div class="found-hotels-item-button-container">
+            <a class="found-hotels-item-detailed" href="#">
+              Подробнее
+            </a>
+            <button class="found-hotels-item-add-to-favorites-button" type="button">
+              В избранное
+            </button>
+            <p class="found-hotels-item-rating-stars found-hotels-item-rating-4-stars">
+                Четыре звезды
+            </p>
+            <p class="found-hotels-item-rating-with-points">
+              Рейтинг:
+              <span class="found-hotels-item-rating-points">
+                8,5
+              </span>
+            </p>
+          </div>
         </li>
 
         <li class="found-hotels-item">
           <a class="found-hotels-item-image-link" href="#">
-            <img class="found-hotels-item-image" src="images/villas-at-poco-diablo.jpg" width="300" height="212"
+            <img class="found-hotels-item-image" src="images/catalog/villas-at-poco-diablo.jpg" width="300" height="212"
                  alt="Вид на горы и радуга">
           </a>
           <a class="found-hotels-item-name-link" href="#">
@@ -221,28 +233,28 @@
               От 5000 ₽
             </span>
           </p>
-          <a class="found-hotels-item-detailed" href="#">
-            Подробнее
-          </a>
-          <button class="found-hotels-item-add-to-favorites-button" type="button">
-            В избранное
-          </button>
-          <p class="found-hotels-item-rating-stars">
-            <span class="visually-hidden">
-              Четыре звезды
-            </span>
-          </p>
-          <p class="found-hotels-item-rating-with-points">
-            Рейтинг:
-            <span class="found-hotels-item-rating-points">
-              9,2
-            </span>
-          </p>
+          <div class="found-hotels-item-button-container">
+            <a class="found-hotels-item-detailed" href="#">
+              Подробнее
+            </a>
+            <button class="found-hotels-item-add-to-favorites-button" type="button">
+              В избранное
+            </button>
+            <p class="found-hotels-item-rating-stars found-hotels-item-rating-4-stars">
+                Четыре звезды
+            </p>
+            <p class="found-hotels-item-rating-with-points">
+              Рейтинг:
+              <span class="found-hotels-item-rating-points">
+                9,2
+              </span>
+            </p>
+          </div>
         </li>
 
         <li class="found-hotels-item">
           <a class="found-hotels-item-image-link" href="#">
-            <img class="found-hotels-item-image" src="images/desert-quail-inn.jpg" width="300" height="212"
+            <img class="found-hotels-item-image" src="images/catalog/desert-quail-inn.jpg" width="300" height="212"
                  alt="Живописные горы на фоне ясного неба">
           </a>
           <a class="found-hotels-item-name-link" href="#">
@@ -258,28 +270,28 @@
               От 2500 ₽
             </span>
           </p>
-          <a class="found-hotels-item-detailed" href="#">
-            Подробнее
-          </a>
-          <button class="found-hotels-item-add-to-favorites-button" type="button">
-            В избранное
-          </button>
-          <p class="found-hotels-item-rating-stars">
-            <span class="visually-hidden">
-              Три звезды
-            </span>
-          </p>
-          <p class="found-hotels-item-rating-with-points">
-            Рейтинг:
-            <span class="found-hotels-item-rating-points">
-              6,9
-            </span>
-          </p>
+          <div class="found-hotels-item-button-container">
+            <a class="found-hotels-item-detailed" href="#">
+              Подробнее
+            </a>
+            <button class="found-hotels-item-add-to-favorites-button" type="button">
+              В избранное
+            </button>
+            <p class="found-hotels-item-rating-stars found-hotels-item-rating-3-stars">
+                Три звезды
+            </p>
+            <p class="found-hotels-item-rating-with-points">
+              Рейтинг:
+              <span class="found-hotels-item-rating-points">
+                6,9
+              </span>
+            </p>
+          </div>
         </li>
 
         <li class="found-hotels-item">
           <a class="found-hotels-item-image-link" href="#">
-            <img class="found-hotels-item-image" src="images/green-tree-inn.jpg" width="300" height="212"
+            <img class="found-hotels-item-image" src="images/catalog/green-tree-inn.jpg" width="300" height="212"
                  alt="Горы в сиянии звездного неба">
           </a>
           <a class="found-hotels-item-name-link" href="#">
@@ -295,30 +307,30 @@
               От 1500 ₽
             </span>
           </p>
-          <a class="found-hotels-item-detailed" href="#">
-            Подробнее
-          </a>
-          <button class="found-hotels-item-add-to-favorites-button" type="button">
-            В избранное
-          </button>
-          <p class="found-hotels-item-rating-stars">
-            <span class="visually-hidden">
-              Две звезды
-            </span>
-          </p>
-          <p class="found-hotels-item-rating-with-points">
-            Рейтинг:
-            <span class="found-hotels-item-rating-points">
-              5,0
-            </span>
-          </p>
+          <div class="found-hotels-item-button-container">
+            <a class="found-hotels-item-detailed" href="#">
+              Подробнее
+            </a>
+            <button class="found-hotels-item-add-to-favorites-button" type="button">
+              В избранное
+            </button>
+            <p class="found-hotels-item-rating-stars found-hotels-item-rating-2-stars">
+                Две звезды
+            </p>
+            <p class="found-hotels-item-rating-with-points">
+              Рейтинг:
+              <span class="found-hotels-item-rating-points">
+                5,0
+              </span>
+            </p>
+          </div>
         </li>
 
       </ul>
 
       <ul class="found-hotels-pagination">
-        <li class="found-hotels-pagination-item">
-          <a class="found-hotels-pagination-link found-hotels-pagination-current">1</a>
+        <li class="found-hotels-pagination-item found-hotels-pagination-item-active">
+          <a class="found-hotels-pagination-link found-hotels-pagination-active">1</a>
         </li>
         <li class="found-hotels-pagination-item">
           <a class="found-hotels-pagination-link" href="#">2</a>
@@ -329,7 +341,7 @@
         <li class="found-hotels-pagination-item">
           <a class="found-hotels-pagination-link" href="#">4</a>
         </li>
-        <li class="found-hotels-pagination-item">
+        <li class="found-hotels-pagination-item found-hotels-pagination-range-item">
           ...
         </li>
         <li class="found-hotels-pagination-item">
@@ -341,12 +353,12 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer inner-footer">
     <section class="email-subscribe">
-      <h2 class="email-subscribe-title">
+      <h2 class="email-subscribe-title section-title">
         Подпишитесь на рассылку
       </h2>
-      <p class="email-subscribe-teaser">
+      <p class="email-subscribe-teaser section-description">
         Только полезная информация и никакого спама, честное бойскаутское!
       </p>
       <form class="email-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">

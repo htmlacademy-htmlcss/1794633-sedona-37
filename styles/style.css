@@ -1,0 +1,656 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.page-header, .main-index, .page-footer, .hotel-catalog-page {
+  width: 1200px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.common-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #756157;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border-width: 0px;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.page-header {
+  display: flex;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+  width: 339px;
+  justify-content: space-between;
+}
+
+.navigation-item-link {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+}
+
+.navigation-item-current span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+}
+
+.choose-places-list {
+  display: flex;
+  list-style: none;
+
+}
+
+.search-places-magnify-glass-button, .favorites-places-button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
+  border: none;
+  width: 44px;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-places-magnify-glass-button {
+  background-image: url("../images/magnifying-glass-icon.svg");
+}
+
+.favorites-places-button {
+  background-image: url("../images/favorites-icon.svg");
+}
+
+.search-places-i-want-here-button{
+  padding-right: 34px;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+
+.welcome-image-container {
+  background-image: url("../images/welcome-mountains.jpg");
+  background-repeat: no-repeat;
+}
+
+.welcome-image {
+  display: block;
+  margin: auto;
+}
+
+
+
+.about-sedona {
+  text-align: center;
+}
+
+.about-sedona-short-description {
+  margin: 69px 290px 25px 290px;
+}
+
+.about-sedona-visit-reasons {
+  margin: 0 274px 69px 274px;
+}
+
+.features-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 400px);
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.feature-item-description-container {
+  padding-left: 85px;
+  padding-right: 85px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.feature-item-with-image .feature-item-description-container {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.feature-item-wo-image:nth-child(even) .feature-item-description-container {
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
+}
+
+.feature-item-wo-image:nth-child(odd) .feature-item-description-container {
+  background-color: rgba(131, 179, 211, 0.2);
+  color: #000000;
+}
+
+.feature-item-with-image {
+  display: flex;
+  grid-column: span 3;
+}
+
+
+
+.feature-title, .service-item-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.feature-description::before {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+
+}
+
+
+.services-title-container {
+  padding: 64px 347px;
+  text-align: center;
+}
+
+.services-list {
+  display: flex;
+  list-style: none;
+}
+
+.service-item {
+  padding: 81px 85px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item-title-house::before {
+  display: block;
+  content: url("../images/house-icon.svg");
+}
+
+.service-item-title-food::before {
+  display: block;
+  content: url("../images/food-icon.svg");
+}
+
+.service-item-title-souvenir::before {
+  display: block;
+  content: url("../images/souvenir-icon.svg");
+}
+
+.service-item:nth-child(odd) {
+  background-color: #83B3D31F;
+}
+
+
+
+
+.search-hotel {
+  padding: 96px 304px;
+  text-align: center;
+}
+
+.search-hotel-button {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+
+
+.email-subscribe {
+  padding: 96px 258px 104px 258px;
+  background-image: url("../images/email-subscribe-background.jpg");
+}
+
+.email-subscribe-title, .email-subscribe-teaser {
+  color: #FFFFFF;
+}
+
+.email-subscribe-teaser {
+  margin-left: 104px;
+  margin-right: 104px;
+}
+
+.email-subscribe-form {
+  width: 684px;
+  height: 52px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.email-input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 4px 0 0 4px;
+  border: 0;
+}
+
+.inner-footer .email-input {
+  background-color: #F2F2F2;
+}
+
+.email-subscribe-button {
+  width: 232px;
+  height: 100%;
+  padding: 0;
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  background-color: #82B3D3;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 36px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+
+
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 70px 35px 70px ;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  width: 142px;
+  justify-content: space-between;
+}
+
+.phone-link {
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+}
+
+
+
+
+
+
+
+.hotel-catalog-top-container {
+  background-image: url("../images/catalog/hotel-filter-background.jpg");
+  background-repeat: no-repeat;
+  padding: 35px 70px 70px 70px;
+  color: #FFFFFF;
+}
+
+.hotel-catalog-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.breadcrumbs-list {
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs-item-to-main-page {
+  background-image: url("../images/catalog/homepage-icon.svg");
+  background-repeat: no-repeat;
+  display: block;
+  height: 12px;
+  width: 12px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.breadcrumbs-item-link-current {
+  font-size: 16px;
+}
+
+.filter-settings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-legend-title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.filter-settings fieldset {
+  border: 0 none;
+}
+
+.infrastructure-filter, .hotel-type-filter {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.infrastructure-filter label, .hotel-type-filter label {
+  line-height: 23px;
+}
+
+.price-input {
+  width: 143px;
+  height: 48px;
+}
+
+
+.price-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form-button-container {
+  display: flex;
+  flex-direction: column;
+  width: 191px;
+  height: 104px;
+  justify-content: space-between;
+}
+
+.filter-form-button {
+  height: 36px;
+  border-width: 0;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.apply-filter-button {
+  background-color: #82B3D3;
+}
+
+.reset-filter-button {
+  background-color: transparent;
+}
+
+.found-hotels {
+  padding: 50px 70px 60px 70px;
+}
+
+
+
+.found-hotels-control-container {
+  display: flex;
+  width: 1060px;
+  height: 49px;
+  margin: 0 0 40px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.found-hotels-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+}
+
+.found-hotels-sort-control {
+  font-size: 18px;
+  line-height: 21px;
+  width: 292px;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.found-hotels-output-type-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+
+}
+
+.found-hotels-output-type-button {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 48px;
+  width: 48px;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.view-as-small-cards-button {
+  background-image: url("../images/catalog/view-as-small-cards.svg");
+}
+
+.view-as-card-with-description-button {
+  background-image: url("../images/catalog/view-as-card-with-detailed-description.svg");
+}
+
+.view-as-list-button {
+  background-image: url("../images/catalog/view-as-list.svg");
+}
+
+.found-hotels-output-type-button {
+  border: 2px solid #E5E5E5 ;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.found-hotels-output-type-button-active {
+  border-color: #000000;
+}
+
+.found-hotels-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 0 40px 0;
+  margin: 0 0 40px 0;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.found-hotels-item {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.found-hotels-item-name-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.found-hotels-item-properties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.found-hotels-item-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+.found-hotels-item-detailed {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #756157;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 8px 26px;
+  border-radius: 4px;
+}
+
+.found-hotels-item-add-to-favorites-button {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.found-hotels-item-rating-stars {
+  background-image: url('../images/catalog/rating-star-icon.svg');
+  background-repeat: space;
+  background-size: 18px auto;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.found-hotels-item-rating-2-stars {
+  width: 42px;
+}
+
+.found-hotels-item-rating-3-stars {
+  width: 66px;
+}
+
+.found-hotels-item-rating-4-stars {
+  width: 90px;
+}
+
+.found-hotels-item-rating-with-points {
+  text-decoration: none;
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+}
+
+
+
+
+.found-hotels-pagination {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.found-hotels-pagination-item {
+  display: flex;
+  padding: 0;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.found-hotels-pagination-item-active {
+  background-color: #F2F2F2;
+}
+
+.found-hotels-pagination-link {
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.found-hotels-pagination-range-item {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.found-hotels-pagination-active {
+  color: #000000;
+}
+
+.inner-footer .email-subscribe{
+  background-image: none;
+}
+
+.inner-footer .section-title {
+  color: #000000;
+}
+
+.inner-footer .email-subscribe-teaser {
+  color: #000000;
+}

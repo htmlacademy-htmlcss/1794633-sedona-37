@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -23,8 +24,8 @@
         </ul>
         <ul class="choose-places-list">
           <li class="choose-places-item">
-            <button class="search-places-button" type="button">
-              <span class="visually-hidden">
+            <button class="search-places-magnify-glass-button" type="button">
+              <span class="magnify-glass-icon visually-hidden">
                 Поиск отеля
               </span>
             </button>
@@ -37,7 +38,7 @@
             </button>
           </li>
           <li class="choose-places-item">
-            <button class="search-places-button" type="button">
+            <button class="search-places-i-want-here-button common-button" type="button">
               Хочу сюда!
             </button>
           </li>
@@ -49,76 +50,94 @@
         <h1 class="hero-title visually-hidden">
           Добро пожаловать в городок Седона!
         </h1>
-        <img class="welcome-image" src="images/mountains.jpg" width="1200" height="485" alt="Восхитительные горы Седоны.">
-        <p class="welcome-title">
-          Потому что Гранд Каньон отстой!
-        </p>
+        <div class="welcome-image-container">
+          <img class="welcome-image" src="images/welcome-catchphrase.svg" width="458" height="352"
+               alt="Добро пожаловать в восхитительную Седону. Потому что Гранд Каньон отстой!">
+        </div>
       </section>
 
       <section class="about-sedona">
-        <h2 class="about-sedona-title">
-          Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+        <h2 class="visually-hidden">
+          О Седоне
         </h2>
-        <p class="about-sedona-short-description">
+        <p class="about-sedona-short-description section-title">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
+        </p>
+        <p class="about-sedona-visit-reasons section-description">
+          Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
         </p>
 
         <ul class="features-list">
           <li class="feature-item feature-item-with-image">
-            <h3 class="feature-title">
-              Настоящий городок
-            </h3>
-            <p class="feature-description">
-              Седона — не аттракцион для туристов, там течёт своя жизнь
-            </p>
-            <img src="images/town-photo.jpg" width="800" height="385" alt="Уютные домики на фоне гор.">
+            <div class="feature-item-description-container">
+              <h3 class="feature-title">
+                Настоящий городок
+              </h3>
+              <p class="feature-description">
+                Седона — не аттракцион для туристов, там течёт своя жизнь
+              </p>
+            </div>
+            <img class="feature-image" src="images/town-photo.jpg" width="800" height="385" alt="Уютные домики на фоне гор.">
           </li>
           <li class="feature-item feature-item-wo-image">
-            <h3 class="feature-title">
-              Небольшая площадь
-            </h3>
-            <p class="feature-description">
-              Все достопримечательности находятся очень близко
-            </p>
+            <div class="feature-item-description-container">
+              <h3 class="feature-title">
+                Небольшая площадь
+              </h3>
+              <p class="feature-description">
+                Все достопримечательности находятся очень близко
+              </p>
+            </div>
           </li>
           <li class="feature-item feature-item-wo-image">
-            <h3 class="feature-title">
-              Красивая дорога
-            </h3>
-            <p class="feature-description">
-              Ехать в Седону из Лас-Вегаса совсем не скучно!
-            </p>
+            <div class="feature-item-description-container">
+              <h3 class="feature-title">
+                Красивая дорога
+              </h3>
+              <p class="feature-description">
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
+              </p>
+            </div>
           </li>
           <li class="feature-item feature-item-wo-image">
-            <h3 class="feature-title">
-              Мало туристов
-            </h3>
-            <p class="feature-description">
-              Большинство едет в Гранд Каньон и толпится там
-            </p>
+            <div class="feature-item-description-container">
+              <h3 class="feature-title">
+                Мало туристов
+              </h3>
+              <p class="feature-description">
+                Большинство едет в Гранд Каньон и толпится там
+              </p>
+            </div>
           </li>
           <li class="feature-item feature-item-with-image">
-            <h3 class="feature-title">
-              Там есть мост дьявола
-            </h3>
-            <p class="feature-description">
-              Да, по нему можно пройти! Если вы осмелитесь, разумеется
-            </p>
-            <img src="images/devil-bridge-photo.jpg" width="800" height="385" alt="Живописное место среди гор похожее на мост.">
+            <img class="feature-image" src="images/devil-bridge-photo.jpg" width="800" height="385" alt="Живописное место среди гор похожее на мост.">
+            <div class="feature-item-description-container">
+              <h3 class="feature-title">
+                Там есть мост дьявола
+              </h3>
+              <p class="feature-description">
+                Да, по нему можно пройти! Если вы осмелитесь, разумеется
+              </p>
+            </div>
           </li>
         </ul>
       </section>
 
       <section class="services">
-        <h2 class="services-title">
-          Приезжайте в Седону отдохнуть в комфорте и уюте!
+        <h2 class="visually-hidden">
+          Услуги
         </h2>
-        <p class="services-common-description">
-          Опытный персонал и качественное обслуживание!
-        </p>
+        <div class="services-title-container">
+          <p class="services-title section-title">
+            Приезжайте в Седону отдохнуть в комфорте и уюте!
+          </p>
+          <p class="services-common-description section-description">
+            Опытный персонал и качественное обслуживание!
+          </p>
+        </div>
         <ul class="services-list">
           <li class="service-item">
-            <h3 class="service-item-title">
+            <h3 class="service-item-title service-item-title-house">
               Жильё
             </h3>
             <p class="service-item-description">
@@ -126,7 +145,7 @@
             </p>
           </li>
           <li class="service-item">
-            <h3 class="service-item-title">
+            <h3 class="service-item-title service-item-title-food">
               Еда
             </h3>
             <p class="service-item-description">
@@ -134,7 +153,7 @@
             </p>
           </li>
           <li class="service-item">
-            <h3 class="service-item-title">
+            <h3 class="service-item-title service-item-title-souvenir">
               Сувениры
             </h3>
             <p class="service-item-description">
@@ -145,13 +164,13 @@
       </section>
 
       <section class="search-hotel">
-        <h2 class="search-hotel-title">
+        <h2 class="search-hotel-title section-title">
           Заинтересовались?
         </h2>
-        <p class="search-hotel-description">
+        <p class="search-hotel-description section-description">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button class="search-hotel-button" type="button">
+        <button class="search-hotel-button common-button" type="button">
           Поиск гостинницы в Седоне
         </button>
       </section>
@@ -160,10 +179,10 @@
 
     <footer class="page-footer">
       <section class="email-subscribe">
-        <h2 class="email-subscribe-title">
+        <h2 class="email-subscribe-title section-title">
           Подпишитесь на рассылку
         </h2>
-        <p class="email-subscribe-teaser">
+        <p class="email-subscribe-teaser section-description">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="email-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
