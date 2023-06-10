@@ -97,14 +97,22 @@ body {
 
 .page-header {
   display: flex;
+  height: 64px;
+  position: relative;
 }
 
+.logo-link {
+  position: absolute;
+  top: 0;
+  left: 70px;
+}
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-left: 238px;
 }
 
 .navigation-list {
@@ -112,6 +120,8 @@ body {
   list-style: none;
   width: 339px;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .navigation-item-link {
@@ -133,6 +143,7 @@ body {
   display: flex;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .search-places-magnify-glass-button, .favorites-places-button {
