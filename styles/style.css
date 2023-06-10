@@ -498,7 +498,9 @@ body {
 }
 
 .found-hotels {
-  padding: 50px 70px 60px 70px;
+  /*padding: 50px 70px 60px 70px;*/
+  width: 1060px;
+  margin: 50px auto 60px;
 }
 
 
