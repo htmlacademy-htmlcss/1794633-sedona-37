@@ -381,7 +381,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px auto 35px auto;
+  margin: 0 auto;
+  width: 1060px;
+  height: 120px;
 }
 
 .social-list {
