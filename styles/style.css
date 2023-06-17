@@ -571,7 +571,9 @@ body {
 
 .filter-legend-title {
   font-size: 20px;
+  font-weight: 700;
   line-height: 24px;
+
 }
 
 .filter-settings fieldset {
