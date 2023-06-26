@@ -51,7 +51,7 @@
     </header>
 
     <main class="hotel-catalog-page main-container">
-      <div class="hotel-catalog-top-container">
+      <div class="hotel-catalog-filter-wrapper">
         <h1 class="hotel-catalog-title">
           Гостиницы Седоны
         </h1>
@@ -71,65 +71,86 @@
           <h2 class="filter-settings-title visually-hidden">
             Настройки фильтрации
           </h2>
-          <fieldset class="infrastructure-filter">
-            <legend class="infrastructure-filter-title filter-legend-title">
+          <fieldset class="filter-set">
+            <legend class="filter-set-title">
               Инфраструктура:
             </legend>
-            <label class="infrastructure-filter-label">
-              <input class="infrastructure-filter-input" type="checkbox" name="swim-pool" checked>
-              Бассейн
-            </label>
-            <label class="infrastructure-filter-label">
-              <input class="infrastructure-filter-input" type="checkbox" name="car-parking" checked>
-              Парковка
-            </label>
-            <label class="infrastructure-filter-label" lang="en">
-              <input class="infrastructure-filter-input" type="checkbox" name="wi-fi">
-              Wi-Fi
-            </label>
+            <ul class="filter-set-child-items">
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label">
+                  <input class="filter-set-child-item-input checkbox" type="checkbox" name="swim-pool" checked>
+                  Бассейн
+                </label>
+              </li>
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label">
+                  <input class="filter-set-child-item-input checkbox" type="checkbox" name="car-parking" checked>
+                  Парковка
+                </label>
+              </li>
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label" lang="en">
+                  <input class="filter-set-child-item-input checkbox" type="checkbox" name="wi-fi">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="hotel-type-filter">
-            <legend class="hotel-type-filter-title filter-legend-title">
-              Тип жилья:
+          <fieldset class="filter-set">
+            <legend class="filter-set-title">
+              Тип Жилья:
             </legend>
-            <label class="hotel-type-label">
-              <input class="hotel-type-input" type="radio" name="hotel-type" checked>
-              Гостиница
-            </label>
-            <label class="hotel-type-label">
-              <input class="hotel-type-input" type="radio" name="hotel-type">
-              Мотель
-            </label>
-            <label class="hotel-type-label">
-              <input class="hotel-type-input" type="radio" name="hotel-type">
-              Апартаменты
-            </label>
+            <ul class="filter-set-child-items">
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label">
+                  <input class="filter-set-child-item-input radio" type="radio" name="hotel-type" checked>
+                  Гостиница
+                </label>
+              </li>
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label">
+                  <input class="filter-set-child-item-input radio" type="radio" name="hotel-type">
+                  Мотель
+                </label>
+              </li>
+              <li class="filter-set-child-item">
+                <label class="filter-set-child-item-label">
+                  <input class="filter-set-child-item-input radio" type="radio" name="hotel-type">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="price-filter">
-            <legend class="price-filter-title filter-legend-title">
+          <fieldset class="filter-set price-filter">
+            <legend class="filter-set-title">
               Стоимость, ₽:
             </legend>
 
-            <div class="min-to-max-input-container">
-              <label class="price-label visually-hidden" for="min-price-value">
-                от
-              </label>
-              <input class="price-input" type="number" id="min-price-value" name="min-price-value" min="0" value="0">
+            <div class="min-to-max-input-wrapper">
+              <div class="price-input-wrapper">
+                <label class="price-label" for="min-price-value" aria-label="Минимальная цена">
+                  от
+                </label>
+                <input class="price-input min-price-input" type="number" id="min-price-value" name="min-price-value" min="0" value="0">
+              </div>
 
-              <label class="price-label visually-hidden" for="max-price-value">
-                до
-              </label>
-              <input class="price-input" type="number" id="max-price-value" name="max-price-value" max="9000" value="9000">
+              <div class="price-input-wrapper">
+                <label class="price-label" for="max-price-value" aria-label="Максимальная цена">
+                  до
+                </label>
+                <input class="price-input max-price-input" type="number" id="max-price-value" name="max-price-value" max="9000"
+                       value="9000">
+              </div>
             </div>
 
-            <label class="price-range-label">
+            <div class="price-range-wrapper">
               <input class="price-range-slider" type="range">
-            </label>
+            </div>
           </fieldset>
 
-          <div class="filter-form-button-container">
+          <div class="filter-buttons">
             <button class="apply-filter-button filter-form-button" type="submit">
               Применить
             </button>
