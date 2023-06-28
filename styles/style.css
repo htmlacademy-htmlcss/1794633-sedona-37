@@ -756,6 +756,11 @@ body {
   align-self: stretch;
 }
 
+.found-hotels-sort-control option {
+  padding: 0;
+}
+
+
 .found-hotels-output-type-list {
   list-style: none;
   display: flex;
@@ -799,46 +804,51 @@ body {
 }
 
 .found-hotels-list {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
+  list-style: none;
   padding: 0 0 40px 0;
   margin: 0 0 40px 0;
   border-bottom: 1px solid #E6E6E6;
 }
 
 .found-hotels-item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
   margin: 0;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  width: 300px;
+  gap: 16px 20px;
+
+}
+
+.found-hotels-item-image-link {
+  grid-column: 1 / -1;
 }
 
 .found-hotels-item-name-link {
+  grid-column: 1 / -1;
   text-decoration: none;
+}
+
+.found-hotels-item-name {
   color: #000000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin: 0;
 }
 
-.found-hotels-item-properties {
-  display: flex;
-  justify-content: space-between;
+.found-hotels-item-price {
+  text-align: end;
 }
 
-.found-hotels-item-button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 20px;
-  row-gap: 16px;
-}
-
-.found-hotels-item-detailed {
-  display: block;
+.found-hotels-item-detailed-link {
+  display: inline-block;
+  text-align: center;
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
@@ -846,7 +856,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 8px 26px;
+  padding: 8px 8px;
   border-radius: 4px;
 }
 
@@ -854,6 +864,7 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #82B3D3;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -863,12 +874,19 @@ body {
   cursor: pointer;
 }
 
+.found-hotels-item-add-to-favorites-button.added-to-favorite {
+  background-color: #7DB54F;
+}
+
 .found-hotels-item-rating-stars {
   background-image: url('../images/catalog/rating-star-icon.svg');
   background-repeat: space;
   background-size: 18px auto;
   text-indent: -9999px;
   overflow: hidden;
+  margin: 0;
+  height: 17px;
+  align-self: center;
 }
 
 .found-hotels-item-rating-2-stars {
@@ -880,7 +898,7 @@ body {
 }
 
 .found-hotels-item-rating-4-stars {
-  width: 90px;
+  width: 89px;
 }
 
 .found-hotels-item-rating-with-points {
@@ -893,6 +911,10 @@ body {
   text-transform: uppercase;
   border: 0;
   border-radius: 4px;
+  margin: 0;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 8px;
 }
 
 
