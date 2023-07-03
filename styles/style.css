@@ -655,7 +655,7 @@ body {
   background-image: url("../images/catalog/hotel-filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 35px 70px 70px 70px;
+  padding: 34.5px 70px 70px 70.5px;
   color: #FFFFFF;
 }
 
@@ -738,25 +738,47 @@ body {
 
 .filter-set-child-item-label {
   line-height: 23px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  position: relative;
 }
 
-.filter-set-child-item-input {
+.control-mark {
+  position: absolute;
   width: 20px;
-  margin: 0;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFFFFF;
 }
 
-.filter-set-child-item-input.checkbox {
-  height: 19px;
+.checkbox-mark {
   border-radius: 4px;
 }
 
-.filter-set-child-item-input.radio {
-  height: 20px;
+.radio-mark {
+  border-radius: 50%;
 }
+
+.control-description {
+  padding-left: 36px;
+}
+
+.filter-set-child-item-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  background-image: url("../images/catalog/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.filter-set-child-item-input[type="radio"]:checked + .control-mark {
+  background-color: #3F5E72;
+  border: 5.5px solid #FFFFFF;
+  box-sizing: border-box;
+}
+
+
 
 
 .price-filter {
@@ -767,12 +789,11 @@ body {
 .min-to-max-input-wrapper {
   display: flex;
   gap: 2px;
+  margin-bottom: 44px;
 }
 
 .price-input-wrapper {
   position: relative;
-  margin-bottom: 36px;
-
 }
 
 .price-input {
@@ -798,7 +819,7 @@ body {
 .price-label {
   position: absolute;
   top: 50%;
-  right: 22px;
+  right: 20px;
   transform: translateY(-50%);
   opacity: 0.3;
   color: #000000;
@@ -806,14 +827,29 @@ body {
 }
 
 .price-range-wrapper {
-  height: 20px;
+  width: 287px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
 }
 
-.price-range-slider {
-  color: #FFFFFF;
-  /*margin-top: auto;*/
-  margin: 0;
-  /*height: 20px;*/
+.price-range-bar {
+  position: absolute;
+  width: 226px;
+  height: 4px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-range-toggle-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  position: relative;
+  border: none;
 }
 
 
@@ -827,8 +863,9 @@ body {
 
 .filter-form-button {
   min-width: 191px;
-  height: 36px;
-  border: 0;
+  min-height: 36px;
+  padding: 8px 8px;
+  border: none;
   border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
@@ -837,35 +874,21 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-}
-
-.apply-filter-button {
-  padding: 8px 50px;
-  border: none;
   font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.reset-filter-button {
-  padding: 5px 54.5px;
-  margin-top: 32px;
-  background: none;
-  border: 3px solid #83b3d300;
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
   cursor: pointer;
   transition-property: opacity, border;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+}
+
+.apply-filter-button {
+
+}
+
+.reset-filter-button {
+  background-color: transparent;
+  /*border: 3px solid #83b3d300;*/
+
 }
 
 
@@ -923,7 +946,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   width: 292px;
-  padding-left: 18px;
+  padding-left: 14px;
   margin-left: auto;
   font-family: inherit;
   border: 2px solid #E5E5E5;
