@@ -263,6 +263,78 @@
           </a>
         </section>
       </footer>
+
+      <div class="popup-visibility-container">
+        <div class="popup">
+          <button class="modal-close-button">
+            <span class="visually-hidden">
+              Закрыть
+            </span>
+          </button>
+          <section class="popup-content">
+            <h2 class="popup-title">
+              Поиск гостиницы в Седоне
+            </h2>
+            <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
+              <span class="date-input-title">
+                Дата Заезда:
+              </span>
+              <label class="arrival-date">
+                <input class="date-input" type="text" name="arrival-date">
+                <span class="date-placeholder">
+                  27 апреля 2020
+                </span>
+                <span class="wrong-date-message">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </label>
+              <span class="date-input-title">
+                Дата Выезда:
+              </span>
+              <label class="departure-date">
+                <input class="date-input" type="text" name="departure-date">
+                <span class="date-placeholder">
+                  1 сентября 2023
+                </span>
+                <span class="free-date-exists-message">
+                  На эти даты есть свободные номера. Пока есть.
+                </span>
+              </label>
+              <span class="adults-quantity-title">
+                Взрослые:
+              </span>
+              <div class="people-quantity-container people-container-adults-quantity">
+                <button class="change-people-quantity-button decrease-people-quantity-button">
+                </button>
+                <label class="adults-quantity">
+                  <input class="people-quantity-input" type="number" name="adults-quantity" value="2">
+                </label>
+                <button class="change-people-quantity-button increase-people-quantity-button">
+                </button>
+              </div>
+              <div class="children-quantity-wrapper">
+                <span class="children-quantity-title">
+                  Дети:
+                </span>
+                <span class="information-about-children">
+                </span>
+              </div>
+              <div class="people-quantity-container people-quantity-container-children">
+                <button class="change-people-quantity-button decrease-quantity-button-background">
+                </button>
+                <label class="adults-quantity">
+                  <input class="people-quantity-input" type="number" name="children-quantity" value="2">
+                </label>
+                <button class="change-people-quantity-button increase-quantity-button-background">
+                </button>
+              </div>
+              <button class="blue-button found-button" type="submit">
+                Найти
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
