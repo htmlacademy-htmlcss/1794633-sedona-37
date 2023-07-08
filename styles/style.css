@@ -185,7 +185,8 @@ body {
   padding: 20px 16px;
 }
 
-.navigation-item-current .navigation-item-link,  .navigation-item-current span {
+.navigation-item-current .navigation-item-link,
+.navigation-item-current span {
   text-decoration: underline;
   text-decoration-color: #756257;
   text-decoration-thickness: 2px;
@@ -202,7 +203,8 @@ body {
   min-width: calc(268px + 70px);
 }
 
-.search-places-magnify-glass-button, .favorites-places-button {
+.search-places-magnify-glass-button,
+.favorites-places-button {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #FFFFFF;
@@ -456,7 +458,8 @@ body {
   background-color: #a9dae9;
 }
 
-.email-subscribe-title, .email-subscribe-teaser {
+.email-subscribe-title,
+.email-subscribe-teaser {
   color: #FFFFFF;
 }
 
@@ -922,8 +925,6 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  font-family: inherit;
-  cursor: pointer;
   transition-property: opacity, border;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -1014,7 +1015,7 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-found-hotels-sort-control:hover {
+.found-hotels-sort-control:hover {
   border: 2px solid #68A2CA;
 }
 
@@ -1328,6 +1329,7 @@ found-hotels-sort-control:hover {
 
 
 
+/*Popup*/
 
 .popup-visibility-container {
   position: fixed;
