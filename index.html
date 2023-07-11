@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <a class="logo-link" href="">
           <img src="images/logo.svg" width="140" height="70" alt="Логотип сайта города Седона">
         </a>
@@ -42,16 +42,17 @@
                 </span>
               </button>
             </li>
-            <li class="choose-places-item">
-              <a class="search-places-i-want-here-button brown-button" href="catalog.html">
-                Хочу сюда!
-              </a>
-            </li>
           </ul>
+          <div class="i-want-here-button-wrapper">
+            <a class="i-want-here-button brown-button" href="#invitation">
+              Хочу сюда!
+            </a>
+          </div>
+
         </nav>
       </header>
-      <main class="main-index main-container">
-        <section class="hero">
+      <main class="main-index main-container" data-test="main">
+        <section class="hero" data-test="hero">
           <h1 class="hero-title visually-hidden">
             Добро пожаловать в городок Седона!
           </h1>
@@ -61,7 +62,7 @@
           </div>
         </section>
 
-        <section class="about-sedona">
+        <section class="about-sedona" data-test="advantages">
           <h2 class="visually-hidden">
             О Седоне
           </h2>
@@ -130,7 +131,7 @@
           </ul>
         </section>
 
-        <section class="services">
+        <section class="services" data-test="service">
           <h2 class="visually-hidden">
             Услуги
           </h2>
@@ -184,7 +185,7 @@
           </ul>
         </section>
 
-        <section class="invitation">
+        <section class="invitation" id="invitation" data-test="search">
           <h2 class="invitation-hotel-title section-title">
             Заинтересовались?
           </h2>
@@ -193,7 +194,7 @@
             <br>
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="search-hotel-button brown-button" href="catalog.html">
+          <a class="search-hotel-button brown-button booking-button" href="#">
             Поиск гостиницы в Седоне
           </a>
         </section>
@@ -201,7 +202,7 @@
       </main>
 
       <footer class="page-footer">
-        <section class="email-subscribe">
+        <section class="email-subscribe" data-test="subscribe">
           <h2 class="email-subscribe-title section-title">
             Подпишитесь на рассылку
           </h2>
@@ -209,7 +210,7 @@
             Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form class="email-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="email-input" type="email" name="email" placeholder="Ваш e-mail">
+            <input class="email-input" type="email" name="email" placeholder="Ваш e-mail" required>
             <button class="email-subscribe-button blue-button" type="submit">
               Подписаться
             </button>
@@ -265,9 +266,9 @@
         </section>
       </footer>
 
-      <div class="popup-visibility-container">
-        <div class="popup">
-          <button class="modal-close-button">
+      <div class="popup-container visually-hidden" data-test="modal">
+        <div class="popup-wrapper">
+          <button class="popup-close-button" type="button">
             <span class="visually-hidden">
               Закрыть
             </span>
@@ -277,59 +278,56 @@
               Поиск гостиницы в Седоне
             </h2>
             <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
-              <span class="date-input-title">
-                Дата Заезда:
-              </span>
               <label class="arrival-date">
-                <input class="date-input" type="text" name="arrival-date" onfocus="(this.type='date')">
-                <span class="date-placeholder">
+                Дата Заезда:
+                <input class="date-input" type="text" name="arrival-date" onfocus="(this.type='date')" required>
+                <span class="date-example">
                   27 апреля 2020
                 </span>
                 <span class="wrong-date-message">
                   Мы не можем отправить вас в прошлое.
                 </span>
               </label>
-              <span class="date-input-title">
-                Дата Выезда:
-              </span>
               <label class="departure-date">
-                <input class="date-input" type="text" name="departure-date" onfocus="(this.type='date')">
-                <span class="date-placeholder">
+                Дата Выезда:
+                <input class="date-input" type="text" name="departure-date" onfocus="(this.type='date')" required>
+                <span class="date-example">
                   1 сентября 2023
                 </span>
-                <span class="free-date-exists-message">
+                <span class="free-date-message">
                   На эти даты есть свободные номера. Пока есть.
                 </span>
               </label>
-              <span class="adults-quantity-title">
+              <label class="adults-quantity-title" for="adults-quantity-input">
                 Взрослые:
-              </span>
-              <div class="people-quantity-container people-container-adults-quantity">
-                <button class="change-people-quantity-button decrease-people-quantity-button" type="button">
+              </label>
+              <div class="adjust-people-quantity-controls adjust-adults-quantity-controls">
+                <button class="change-people-quantity-button decrease-people-button" type="button">
                 </button>
-                <label class="adults-quantity">
-                  <input class="people-quantity-input" type="number" name="adults-quantity" value="2">
-                </label>
-                <button class="change-people-quantity-button increase-people-quantity-button" type="button">
+                <input class="people-quantity-input" id="adults-quantity-input" type="number" name="adults-quantity"
+                       value="2" required>
+                <button class="change-people-quantity-button increase-people-button" type="button">
                 </button>
               </div>
-              <div class="children-quantity-wrapper">
+              <label class="children-quantity-wrapper" for="children-quantity-input">
                 <span class="children-quantity-title">
                   Дети:
                 </span>
-                <span class="information-about-children">
+                <span class="children-information-icon" aria-labelledby="tooltip-about-children">
                 </span>
-              </div>
-              <div class="people-quantity-container people-quantity-container-children">
-                <button class="change-people-quantity-button decrease-quantity-button-background" type="button">
+                <span class="children-tooltip" role="tooltip" id="tooltip-about-children">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.
+                </span>
+              </label>
+              <div class="adjust-people-quantity-controls adjust-children-quantity-controls">
+                <button class="change-people-quantity-button decrease-people-button" type="button">
                 </button>
-                <label class="adults-quantity">
-                  <input class="people-quantity-input" type="number" name="children-quantity" value="2">
-                </label>
-                <button class="change-people-quantity-button increase-quantity-button-background" type="button">
+                <input class="people-quantity-input" id="children-quantity-input" type="number" name="qty-children" value="2">
+                <button class="change-people-quantity-button increase-people-button" type="button">
                 </button>
               </div>
-              <button class="blue-button found-button" type="submit">
+              <button class="blue-button button-found" type="submit">
                 Найти
               </button>
             </form>
@@ -337,5 +335,6 @@
         </div>
       </div>
     </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
