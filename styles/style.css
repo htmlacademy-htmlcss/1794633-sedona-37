@@ -132,8 +132,6 @@ body {
   margin-top: 0;
 }
 
-
-
 /*Шапка страницы с навигацией*/
 
 .page-header {
@@ -225,10 +223,12 @@ body {
 }
 
 .search-places-magnify-glass-button {
+  background-color: #ffffff;
   background-image: url("../images/magnifying-glass-icon.svg");
 }
 
 .favorites-places-button {
+  background-color: #ffffff;
   background-image: url("../images/favorites-icon.svg");
   position: relative;
   font-family: inherit;
@@ -250,12 +250,10 @@ body {
   box-sizing: border-box;
 }
 
-
-
-
 /*Секция hero*/
 
 .welcome-image-container {
+  background-color: #a9dae9;
   background-image: url("../images/welcome-mountains.jpg");
   background-repeat: no-repeat;
   height: 485px;
@@ -268,8 +266,6 @@ body {
   display: block;
   margin: auto;
 }
-
-
 
 /*Секция о Седоне*/
 
@@ -285,8 +281,6 @@ body {
 .about-sedona-visit-reasons {
   margin: 0 auto 90px auto;
 }
-
-
 
 /*Секция преимуществ*/
 
@@ -379,8 +373,6 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-
-
 /*Секция сервисов*/
 
 .services-title-container {
@@ -449,8 +441,6 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-
-
 /*Секция перехода к поиску отелей*/
 
 .invitation {
@@ -461,8 +451,6 @@ body {
 .invitation-description {
   margin-bottom: 54px;
 }
-
-
 
 /*Подвал с возможностью подписки и контактной информацией*/
 
@@ -558,22 +546,21 @@ body {
   color: #ffffff;
 }
 
-
 .contacts {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 39px 70px 30px 70px;
-
 }
 
 .social-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   min-width: 142px;
+  max-width: 250px;
   height: 100%;
-
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   padding: 0;
   margin: 5px 0;
   align-items: center;
@@ -585,7 +572,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  fill: #83B3D3;
+  fill: #83b3d3;
   transition-property: fill;
   transition-duration: 0.3s;
 }
@@ -602,9 +589,6 @@ body {
 .social-item-link:active {
   fill: rgba(104, 162, 202, 0.3);
 }
-
-
-
 
 .phone-link {
   text-decoration: none;
@@ -629,7 +613,6 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-
 .html-academy-link {
   margin: 0;
   padding: 0;
@@ -644,7 +627,6 @@ body {
   transition-duration: 0.3s;
 }
 
-
 .html-academy-link svg:hover {
   fill: #756157;
 }
@@ -658,12 +640,10 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-
-
 /*СТРАНИЦА КАТАЛОГА*/
 
-
 .hotel-catalog-filter {
+  background-color: #a9dae9;
   background-image: url("../images/catalog/hotel-filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -717,12 +697,6 @@ body {
 .breadcrumbs-item-link:active {
   opacity: 0.3;
 }
-
-
-
-
-
-
 
 .filter-settings {
   display: flex;
@@ -828,7 +802,6 @@ body {
   opacity: 0.1;
 }
 
-
 .price-filter {
   display: flex;
   flex-direction: column;
@@ -913,14 +886,12 @@ body {
 }
 
 .price-range-toggle-button:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .price-range-toggle-button:active {
-  outline: 2px solid #83B3D3;
+  outline: 2px solid #83b3d3;
 }
-
-
 
 .filter-buttons {
   display: flex;
@@ -948,21 +919,14 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.apply-filter-button {
-
-}
-
 .reset-filter-button {
   background-color: transparent;
   border: 3px solid transparent;
-
 }
-
 
 .reset-filter-button:hover {
   opacity: 0.6;
 }
-
 
 .reset-filter-button:focus {
   border: 3px solid #83b3d3;
@@ -979,17 +943,10 @@ body {
   border: 3px solid #83b3d300;
 }
 
-
-
-
 .found-hotels {
   width: 1060px;
   margin: 50px auto 61px;
 }
-
-
-
-
 
 .found-hotels-control-container {
   display: flex;
@@ -1006,7 +963,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-
 }
 
 .found-hotels-sort-control {
@@ -1032,11 +988,11 @@ body {
 }
 
 .found-hotels-sort-control:hover {
-  border: 2px solid #68A2CA;
+  border: 2px solid #68a2ca;
 }
 
 .found-hotels-sort-control:focus {
-  border: 2px solid #68A2CA;
+  border: 2px solid #68a2ca;
   outline: none;
 }
 
@@ -1048,8 +1004,6 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
 }
-
-
 
 .found-hotels-output-type-list {
   list-style: none;
@@ -1135,7 +1089,6 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   gap: 16px 20px;
-
 }
 
 .found-hotels-item-image-link {
@@ -1248,16 +1201,12 @@ body {
   padding-bottom: 8px;
 }
 
-
-
-
 .found-hotels-pagination {
   display: flex;
   list-style: none;
   gap: 8px;
   margin: 0;
   padding: 0;
-
 }
 
 .found-hotels-pagination-item {
@@ -1310,10 +1259,9 @@ body {
 }
 
 .found-hotels-pagination-link:active{
-  background-color: #000;: #82B3D3;
+  background-color: #000;: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
-
 
 .found-hotels-pagination-active,
 .found-hotels-pagination-active:hover,
@@ -1323,14 +1271,6 @@ body {
   background-color: #f2f2f2;
   color: #000000;
 }
-
-
-
-
-
-
-
-
 
 .inner-footer .email-subscribe{
   background-image: none;
@@ -1344,9 +1284,6 @@ body {
 .inner-footer .email-subscribe-teaser {
   color: #000000;
 }
-
-
-
 
 /*Popup*/
 
@@ -1552,7 +1489,6 @@ body {
   outline: 3px solid #82b3d3;
 }
 
-
 .increase-people-button {
   position: absolute;
   right: 10px;
@@ -1651,7 +1587,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .children-information-icon:hover + .children-tooltip {
   display: block;
