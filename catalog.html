@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="page-container">
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <a class="logo-link" href="index.html">
         <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип сайта города Седона">
       </a>
@@ -27,32 +27,32 @@
         <ul class="choose-places-list">
           <li class="choose-places-item">
             <button class="search-places-magnify-glass-button" type="button">
-              <span class="magnify-glass-icon visually-hidden">
-                Поиск отеля
-              </span>
+                <span class="magnify-glass-icon visually-hidden">
+                  Поиск отеля
+                </span>
             </button>
           </li>
           <li class="choose-places-item">
             <button class="favorites-places-button" type="button">
-              <span class="visually-hidden">
-                Открыть Избранное
-              </span>
+                <span class="visually-hidden">
+                  Открыть Избранное
+                </span>
               <span class="favorites-places-counter">
-                12
-              </span>
+                  12
+                </span>
             </button>
           </li>
-          <li class="choose-places-item">
-            <a class="search-places-i-want-here-button brown-button" href="#">
-              Хочу сюда!
-            </a>
-          </li>
         </ul>
+        <div class="i-want-here-button-wrapper">
+          <a class="i-want-here-button brown-button" href="#">
+            Хочу сюда!
+          </a>
+        </div>
       </nav>
     </header>
 
-    <main class="hotel-catalog-page main-container">
-      <div class="hotel-catalog-filter-wrapper">
+    <main class="hotel-catalog-page main-container" data-test="main">
+      <section class="hotel-catalog-filter" data-test="filter">
         <h1 class="hotel-catalog-title">
           Гостиницы Седоны
         </h1>
@@ -92,7 +92,7 @@
                   <span class="control-mark checkbox-mark"></span>
                   <span class="control-description">
                     Парковка
-                  <span>
+                  </span>
                 </label>
               </li>
               <li class="filter-set-child-item">
@@ -104,6 +104,7 @@
                   </span>
                 </label>
               </li>
+
             </ul>
           </fieldset>
 
@@ -127,7 +128,7 @@
                   <span class="control-mark radio-mark"></span>
                   <span class="control-description">
                     Мотель
-                  <span>
+                  </span>
                 </label>
               </li>
               <li class="filter-set-child-item">
@@ -152,15 +153,15 @@
                 <label class="price-label" for="min-price-value" aria-label="Минимальная цена">
                   от
                 </label>
-                <input class="price-input min-price-input" type="text" id="min-price-value" name="min-price-value" min="0" value="0">
+                <input class="price-input min-price-input" type="text" id="min-price-value" name="min-price-value" value="0" required>
               </div>
 
               <div class="price-input-wrapper">
                 <label class="price-label" for="max-price-value" aria-label="Максимальная цена">
                   до
                 </label>
-                <input class="price-input max-price-input" type="text" id="max-price-value" name="max-price-value" max="9000"
-                       value="9000">
+                <input class="price-input max-price-input" type="text" id="max-price-value" name="max-price-value"
+                       value="9000" required>
               </div>
             </div>
 
@@ -185,9 +186,9 @@
             </button>
           </div>
         </form>
-      </div>
+      </section>
 
-      <section class="found-hotels">
+      <section class="found-hotels" data-test="catalog">
 
         <div class="found-hotels-control-container">
           <h2 class="found-hotels-title">
@@ -389,8 +390,8 @@
 
     </main>
 
-    <footer class="page-footer inner-footer">
-      <section class="email-subscribe">
+    <footer class="page-footer inner-footer" data-test="footer">
+      <section class="email-subscribe" data-test="subscribe">
         <h2 class="email-subscribe-title section-title">
           Подпишитесь на рассылку
         </h2>
@@ -398,7 +399,7 @@
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="email-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="email-input" type="email" name="email" placeholder="Ваш e-mail">
+          <input class="email-input" type="email" name="email" placeholder="Ваш e-mail" required>
           <button class="email-subscribe-button blue-button" type="submit">
             Подписаться
           </button>
