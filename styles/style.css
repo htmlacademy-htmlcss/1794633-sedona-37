@@ -174,15 +174,6 @@ body {
   padding: 20px 16px;
 }
 
-.navigation-item-current span {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #000000;
-  padding: 20px 16px;
-}
-
 .navigation-item-current .navigation-item-link,
 .navigation-item-current span {
   text-decoration: underline;
@@ -390,6 +381,7 @@ body {
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -537,7 +529,7 @@ body {
 }
 
 .blue-button:active {
-  background-color: #82d3d3;
+  background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -736,11 +728,13 @@ body {
   margin: 0;
   padding: 0;
   gap: 16px;
+  max-width: 270px;
 }
 
 .filter-set-child-item-label {
   line-height: 23px;
   position: relative;
+  display: inline-block;
 }
 
 .control-mark {
@@ -762,6 +756,7 @@ body {
 
 .control-description {
   padding-left: 36px;
+  display: inline-block;
 }
 
 .filter-set-child-item-input[type="checkbox"]:checked + .control-mark::before {
@@ -1231,6 +1226,10 @@ body {
   vertical-align: middle;
   text-align: center;
   padding: 0 10px;
+  border-radius: 4px;
+  transition-property: background, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .found-hotels-pagination-range-item {
@@ -1250,7 +1249,7 @@ body {
 }
 
 .found-hotels-pagination-link:hover{
-  background: #68a2ca;
+  background-color: #68a2ca;
 }
 
 .found-hotels-pagination-link:focus{
@@ -1259,7 +1258,7 @@ body {
 }
 
 .found-hotels-pagination-link:active{
-  background-color: #000;: #82b3d3;
+  background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
